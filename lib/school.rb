@@ -6,6 +6,9 @@ class School
     @name = name 
     @roster = {}
   end   
+  
+  def roster
+    @roster
  
   def add_student(name, grade)
     @roster[grade] = []
