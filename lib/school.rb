@@ -11,6 +11,7 @@ class School
   def add_student(name, grade)
     @name = name 
     @grade - grade
+    @roster << self 
   end  
   
   def grade(num)
