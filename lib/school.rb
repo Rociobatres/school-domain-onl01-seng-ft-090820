@@ -12,11 +12,11 @@ class School
   end   
  
   def add_student(name, grade)
-    # @roster[grade] = []
-    # if @roster.has_key?(grade)
+    @roster[grade] = []
+    if @roster.has_key?(grade)
       @roster[grade] << name 
-   #else 
-    # @roster[grade] = [name]
+   else 
+    @roster[grade] = [name]
     end  
   end  
   
@@ -25,6 +25,7 @@ class School
   end  
   
   def sort
-    @sort.roster 
+    self.roster.each do |grade, students|
+      grade.students.sort!
   end   
 end   
